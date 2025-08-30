@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animesticker Hub Studio — Original Vinyl Stickers & Decals</title>
+  <meta name="description" content="Original, policy‑compliant vinyl stickers and decals. No third‑party IP.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}</style>
+  <script>
+    function route(){const h=(location.hash||'#home').slice(1);document.querySelectorAll('[data-page]').forEach(s=>s.classList.toggle('hidden',s.dataset.page!==h));}
+    addEventListener('hashchange',route);addEventListener('DOMContentLoaded',route);
+  </script>
+</head>
+<body class="min-h-screen bg-white text-black">
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-2xl bg-black/90"></div>
+      <div class="leading-tight">
+        <div class="font-bold">Animesticker Hub Studio</div>
+        <div class="text-xs text-black/60">Original Vinyl Stickers & Decals</div>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#catalog" class="hover:underline">Catalog</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#policies" class="hover:underline">Policies</a>
+      <a href="#faq" class="hover:underline">FAQ</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section data-page="home" class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Clean, Original Stickers for Everyday Use</h1>
+        <p class="mt-4 text-black/70">We design and produce original vinyl stickers and decals. No licensed IP — just minimal geometry, nature line art, and positive typography.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#catalog" class="px-4 py-2 rounded-2xl shadow bg-black text-white">Browse Catalog</a>
+          <a href="#policies" class="px-4 py-2 rounded-2xl border">Policies</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <img src="assets/geo_circle.png" alt="Geometric circle" class="rounded-2xl border">
+        <img src="assets/geo_square.png" alt="Geometric square" class="rounded-2xl border">
+        <img src="assets/geo_triangle.png" alt="Geometric triangle" class="rounded-2xl border">
+        <img src="assets/line_wave.png" alt="Nature line wave" class="rounded-2xl border">
+        <img src="assets/quote_yes.png" alt="YES typography" class="rounded-2xl border">
+        <img src="assets/quote_bekind.png" alt="BE KIND typography" class="rounded-2xl border">
+      </div>
+    </div>
+  </section>
+
+  <section data-page="catalog" class="max-w-7xl mx-auto px-4 py-12 hidden">
+    <h2 class="text-2xl font-bold">Catalog</h2>
+    <p class="text-black/70 mt-2">Representative selection. All art created by our studio.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/geo_circle.png" alt="Geometric Vinyl Sticker Pack" class="w-full aspect-[4/3] object-cover">
+        <div class="p-4">
+          <div class="text-sm text-black/50">SKU GEO-001</div>
+          <h3 class="font-semibold mt-1">Geometric Vinyl Sticker Pack</h3>
+          <p class="text-sm text-black/70 mt-2">Triangles, circles, squares — clean originals.</p>
+          <div class="text-sm mt-3">Size: 6–10cm • PVC vinyl</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/geo_square.png" alt="Minimal Squares Set" class="w-full aspect-[4/3] object-cover">
+        <div class="p-4">
+          <div class="text-sm text-black/50">SKU GEO-002</div>
+          <h3 class="font-semibold mt-1">Minimal Squares Set</h3>
+          <p class="text-sm text-black/70 mt-2">Sharp corners, matte finish.</p>
+          <div class="text-sm mt-3">Size: 6–10cm • PVC vinyl</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/geo_triangle.png" alt="Triangle Duo Pack" class="w-full aspect-[4/3] object-cover">
+        <div class="p-4">
+          <div class="text-sm text-black/50">SKU GEO-003</div>
+          <h3 class="font-semibold mt-1">Triangle Duo Pack</h3>
+          <p class="text-sm text-black/70 mt-2">Two‑tone triangles for laptops and bottles.</p>
+          <div class="text-sm mt-3">Size: 6–10cm • PVC vinyl</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/line_wave.png" alt="Nature Line Art Stickers" class="w-full aspect-[4/3] object-cover">
+        <div class="p-4">
+          <div class="text-sm text-black/50">SKU NAT-014</div>
+          <h3 class="font-semibold mt-1">Nature Line Art Stickers</h3>
+          <p class="text-sm text-black/70 mt-2">Leaves, waves, and mountain curves.</p>
+          <div class="text-sm mt-3">Size: 6–10cm • PVC vinyl</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/quote_yes.png" alt="Positive Quotes — YES" class="w-full aspect-[4/3] object-cover">
+        <div class="p-4">
+          <div class="text-sm text-black/50">SKU TXT-101</div>
+          <h3 class="font-semibold mt-1">Positive Quotes — “YES”</h3>
+          <p class="text-sm text-black/70 mt-2">Bold typography in our own font setting.</p>
+          <div class="text-sm mt-3">Size: 8–12cm • PVC vinyl</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/quote_bekind.png" alt="Positive Quotes — BE KIND" class="w-full aspect-[4/3] object-cover">
+        <div class="p-4">
+          <div class="text-sm text-black/50">SKU TXT-102</div>
+          <h3 class="font-semibold mt-1">Positive Quotes — “BE KIND”</h3>
+          <p class="text-sm text-black/70 mt-2">Uplifting decal for cars or laptops.</p>
+          <div class="text-sm mt-3">Size: 10–15cm • PVC vinyl</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/mix_shapes.png" alt="Mix Shapes Starter" class="w-full aspect-[4/3] object-cover">
+        <div class="p-4">
+          <div class="text-sm text-black/50">SKU MIX-021</div>
+          <h3 class="font-semibold mt-1">Mix Shapes Starter</h3>
+          <p class="text-sm text-black/70 mt-2">A little circle + a little square — fun combo.</p>
+          <div class="text-sm mt-3">Size: 6–10cm • PVC vinyl</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/car_line.png" alt="Clean Car Window Decal" class="w-full aspect-[4/3] object-cover">
+        <div class="p-4">
+          <div class="text-sm text-black/50">SKU CAR-020</div>
+          <h3 class="font-semibold mt-1">Clean Car Window Decal</h3>
+          <p class="text-sm text-black/70 mt-2">Icon‑only silhouettes (no brands).</p>
+          <div class="text-sm mt-3">Size: 8–20cm • PVC vinyl</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/mountain_minimal.png" alt="Mountain Minimal" class="w-full aspect-[4/3] object-cover">
+        <div class="p-4">
+          <div class="text-sm text-black/50">SKU GEO-009</div>
+          <h3 class="font-semibold mt-1">Mountain Minimal</h3>
+          <p class="text-sm text-black/70 mt-2">Abstract peaks in simple shapes.</p>
+          <div class="text-sm mt-3">Size: 8–12cm • PVC vinyl</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="about" class="max-w-5xl mx-auto px-4 py-12 hidden">
+    <h2 class="text-2xl font-bold">About Us</h2>
+    <p class="mt-4 text-black/70">We are a small studio in Kuala Lumpur producing original, policy‑compliant vinyl stickers and decals. Designed in‑house, printed in small batches.</p>
+  </section>
+
+  <section data-page="policies" class="max-w-5xl mx-auto px-4 py-12 hidden">
+    <h2 class="text-2xl font-bold">Store Policies</h2>
+    <div class="mt-6 space-y-8">
+      <article><h3 class="font-semibold text-lg">Terms of Service</h3><p class="text-sm text-black/70 mt-2">We publish only original designs created by our studio. No third‑party IP or licensed character art.</p></article>
+      <article><h3 class="font-semibold text-lg">Privacy Policy</h3><p class="text-sm text-black/70 mt-2">We collect minimal data necessary to respond to inquiries. Email <a class="underline" href="mailto:admin@animestickerhub.com">admin@animestickerhub.com</a>.</p></article>
+      <article><h3 class="font-semibold text-lg">Refund & Returns</h3><p class="text-sm text-black/70 mt-2">Returns accepted within 14 days for unused items. For issues, contact us within 7 days.</p></article>
+      <article><h3 class="font-semibold text-lg">Content & IP Policy</h3><p class="text-sm text-black/70 mt-2">We do not list or depict third‑party intellectual property or trademarks. Report any concerns to our email.</p></article>
+    </div>
+  </section>
+
+  <section data-page="faq" class="max-w-5xl mx-auto px-4 py-12 hidden">
+    <h2 class="text-2xl font-bold">FAQ</h2>
+    <div class="mt-6 space-y-4">
+      <details class="rounded-2xl border p-4"><summary class="font-semibold cursor-pointer">Are these stickers waterproof?</summary><div class="text-sm text-black/70 mt-2">Yes. PVC vinyl with protective laminate; water and UV resistant.</div></details>
+      <details class="rounded-2xl border p-4"><summary class="font-semibold cursor-pointer">Do you accept custom designs?</summary><div class="text-sm text-black/70 mt-2">We accept custom requests that do not reference third‑party IP or trademarks.</div></details>
+      <details class="rounded-2xl border p-4"><summary class="font-semibold cursor-pointer">Where do you ship from?</summary><div class="text-sm text-black/70 mt-2">We ship from Kuala Lumpur, Malaysia.</div></details>
+    </div>
+  </section>
+
+  <section data-page="contact" class="max-w-3xl mx-auto px-4 py-12 hidden">
+    <h2 class="text-2xl font-bold">Contact</h2>
+    <form class="mt-6 grid gap-4 max-w-xl" onsubmit="event.preventDefault(); alert('Thanks! Please email us at admin@animestickerhub.com.');">
+      <label class="grid gap-1 text-sm"><span>Name</span><input class="border rounded-xl px-3 py-2" placeholder="Your name"></label>
+      <label class="grid gap-1 text-sm"><span>Email</span><input class="border rounded-xl px-3 py-2" placeholder="you@email.com"></label>
+      <label class="grid gap-1 text-sm"><span>Message</span><textarea class="border rounded-xl px-3 py-2 min-h-[120px]" placeholder="How can we help?"></textarea></label>
+      <button type="submit" class="px-4 py-2 rounded-2xl shadow bg-black text-white w-max">Send</button>
+    </form>
+    <div class="mt-10 text-sm text-black/70">
+      <div>Animesticker Hub Studio • Kuala Lumpur, Malaysia</div>
+      <div>Business Hours: Mon–Fri 10:00–17:00</div>
+      <div>Email: <a class="underline" href="mailto:admin@animestickerhub.com">admin@animestickerhub.com</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t bg-white">
+  <div class="max-w-7xl mx-auto px-4 py-8 text-sm text-black/60 grid md:grid-cols-3 gap-6">
+    <div><div class="font-semibold text-black">Animesticker Hub Studio</div><p class="mt-2">Original vinyl stickers & decals. No third‑party IP.</p></div>
+    <div><div class="font-semibold text-black">Policies</div><ul class="mt-2 space-y-1"><li><a href="#policies" class="underline">Terms</a></li><li><a href="#policies" class="underline">Privacy</a></li><li><a href="#policies" class="underline">Refund</a></li><li><a href="#policies" class="underline">Content & IP</a></li></ul></div>
+    <div><div class="font-semibold text-black">Contact</div><ul class="mt-2 space-y-1"><li><a class="underline" href="mailto:admin@animestickerhub.com">admin@animestickerhub.com</a></li><li>Kuala Lumpur, Malaysia</li></ul></div>
+  </div>
+  <div class="text-center text-xs text-black/50 pb-6">© <script>document.write(new Date().getFullYear())</script> Animesticker Hub Studio. All rights reserved.</div>
+</footer>
+</body>
+</html>
