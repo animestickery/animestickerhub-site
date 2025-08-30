@@ -3,200 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Animesticker Hub Studio — Original Vinyl Stickers</title>
-  <meta name="description" content="Animesticker Hub Studio produces original, policy-compliant vinyl stickers and decals. No third‑party IP.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Animesticker Hub Studio — Original Vinyl Stickers & Decals</title>
+  <meta name="description" content="Original, policy-compliant vinyl stickers and decals. No third-party IP.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, 'Helvetica Neue', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
-  </style>
+  <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}</style>
+  <script>
+    function route(){
+      const h=(location.hash||'#home').slice(1);
+      document.querySelectorAll('[data-page]')
+        .forEach(s=>s.classList.toggle('hidden',s.dataset.page!==h));
+    }
+    window.addEventListener('hashchange',route);
+    window.addEventListener('DOMContentLoaded',route);
+  </script>
 </head>
 <body class="min-h-screen bg-white text-black">
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-2xl bg-black/90"></div>
-        <div class="leading-tight">
-          <div class="font-bold tracking-wide">Animesticker Hub Studio</div>
-          <div class="text-xs text-black/60">Original Vinyl Stickers & Decals</div>
-        </div>
-      </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#home" class="hover:underline underline-offset-4">Home</a>
-        <a href="#catalog" class="hover:underline underline-offset-4">Catalog</a>
-        <a href="#policies" class="hover:underline underline-offset-4">Policies</a>
-        <a href="#contact" class="hover:underline underline-offset-4">Contact</a>
-      </nav>
-      <div class="md:hidden">
-        <select class="border rounded-xl px-3 py-2 text-sm" onchange="location.hash=this.value">
-          <option value="home">Home</option>
-          <option value="catalog">Catalog</option>
-          <option value="policies">Policies</option>
-          <option value="contact">Contact</option>
-        </select>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-2xl bg-black/90"></div>
+      <div class="leading-tight">
+        <div class="font-bold">Animesticker Hub Studio</div>
+        <div class="text-xs text-black/60">Original Vinyl Stickers & Decals</div>
       </div>
     </div>
-  </header>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#catalog" class="hover:underline">Catalog</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#policies" class="hover:underline">Policies</a>
+      <a href="#faq" class="hover:underline">FAQ</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <main id="home">
-    <section class="bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Clean, Original Stickers for Everyday Use</h1>
-          <p class="mt-4 text-black/70 leading-relaxed">
-            We design and produce <strong>original</strong> vinyl stickers and decals. No licensed IP, no fan art — just
-            minimal shapes, nature line art, and typography we created ourselves. Weather-resistant, easy to apply.
-          </p>
-          <div class="mt-6 flex gap-3">
-            <a href="#catalog" class="px-4 py-2 rounded-2xl shadow bg-black text-white">Browse Catalog</a>
-            <a href="#policies" class="px-4 py-2 rounded-2xl border">Policies</a>
-          </div>
-          <ul class="mt-6 text-sm text-black/60 list-disc pl-5 space-y-1">
-            <li>Original art only. We don’t sell third‑party IP or licensed character art.</li>
-            <li>Durable PVC vinyl, water & UV resistant.</li>
-            <li>Designed and shipped from Kuala Lumpur, Malaysia.</li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-3xl p-6 shadow grid grid-cols-3 gap-3">
-          <div class="aspect-square rounded-2xl border bg-gray-100"></div>
-          <div class="aspect-square rounded-2xl border bg-gray-100"></div>
-          <div class="aspect-square rounded-2xl border bg-gray-100"></div>
-          <div class="aspect-square rounded-2xl border bg-gray-100"></div>
-          <div class="aspect-square rounded-2xl border bg-gray-100"></div>
-          <div class="aspect-square rounded-2xl border bg-gray-100"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="catalog" class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold">Catalog</h2>
-      <p class="text-black/70 mt-2">Representative, non-exhaustive selection. All art is created by our studio.</p>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        <div class="rounded-3xl border bg-white shadow-sm overflow-hidden">
-          <div class="aspect-[4/3] bg-gray-100"></div>
-          <div class="p-4">
-            <div class="text-sm text-black/50">SKU GEO-001</div>
-            <h3 class="font-semibold mt-1">Geometric Vinyl Sticker Pack</h3>
-            <p class="text-sm text-black/70 mt-2">Minimal geometric shapes — triangles, circles, squares. Original designs.</p>
-            <div class="text-sm mt-3">Approx. size: 6cm – 10cm</div>
-          </div>
-        </div>
-        <div class="rounded-3xl border bg-white shadow-sm overflow-hidden">
-          <div class="aspect-[4/3] bg-gray-100"></div>
-          <div class="p-4">
-            <div class="text-sm text-black/50">SKU NAT-014</div>
-            <h3 class="font-semibold mt-1">Nature Line Art Stickers</h3>
-            <p class="text-sm text-black/70 mt-2">Leaves, mountains, waves. Hand-drawn, clean line art.</p>
-            <div class="text-sm mt-3">Approx. size: 6cm – 10cm</div>
-          </div>
-        </div>
-        <div class="rounded-3xl border bg-white shadow-sm overflow-hidden">
-          <div class="aspect-[4/3] bg-gray-100"></div>
-          <div class="p-4">
-            <div class="text-sm text-black/50">SKU TXT-101</div>
-            <h3 class="font-semibold mt-1">Positive Quotes Decals</h3>
-            <p class="text-sm text-black/70 mt-2">Short inspirational phrases in our own typography.</p>
-            <div class="text-sm mt-3">Approx. size: 6cm – 12cm</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="policies" class="max-w-4xl mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold">Store Policies</h2>
-      <div class="mt-6 space-y-8">
-        <article>
-          <h3 class="font-semibold text-lg">Terms of Service</h3>
-          <p class="text-black/70 mt-2 text-sm leading-relaxed">
-            This website showcases our original sticker designs and materials. All product names and descriptions are
-            generic and do not reference third‑party brands or characters. By using this site you agree not to upload or
-            request infringing artwork. We reserve the right to decline custom requests that reference third‑party IP.
-          </p>
-        </article>
-        <article>
-          <h3 class="font-semibold text-lg">Privacy Policy</h3>
-          <p class="text-black/70 mt-2 text-sm leading-relaxed">
-            We collect minimal data necessary to respond to inquiries (name, email). We do not sell personal data. You may
-            request access or deletion at any time by emailing <a class="underline" href="mailto:admin@animestickerhub.com">admin@animestickerhub.com</a>.
-          </p>
-        </article>
-        <article>
-          <h3 class="font-semibold text-lg">Refund & Returns</h3>
-          <p class="text-black/70 mt-2 text-sm leading-relaxed">
-            Unused items in original condition may be returned within 14 days of delivery. For issues (damaged or wrong
-            item), contact us within 7 days and we will arrange a replacement or refund. Proof of purchase required.
-          </p>
-        </article>
-        <article>
-          <h3 class="font-semibold text-lg">Content & IP Policy</h3>
-          <p class="text-black/70 mt-2 text-sm leading-relaxed">
-            We publish only original designs created by our studio. We do not list, depict, or reference third‑party
-            intellectual property, registered trademarks, or copyrighted characters. If you believe any content on this
-            site infringes your rights, please notify us at <a class="underline" href="mailto:admin@animestickerhub.com">admin@animestickerhub.com</a> and we will promptly review.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="max-w-3xl mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold">Contact</h2>
-      <p class="text-black/70 mt-2">We typically reply within 1–2 business days.</p>
-
-      <form class="mt-6 grid gap-4 max-w-xl" onsubmit="event.preventDefault(); alert('Thanks! Please email us directly at admin@animestickerhub.com');">
-        <label class="grid gap-1 text-sm">
-          <span>Name</span>
-          <input class="border rounded-xl px-3 py-2" placeholder="Your name">
-        </label>
-        <label class="grid gap-1 text-sm">
-          <span>Email</span>
-          <input class="border rounded-xl px-3 py-2" placeholder="you@email.com">
-        </label>
-        <label class="grid gap-1 text-sm">
-          <span>Message</span>
-          <textarea class="border rounded-xl px-3 py-2 min-h-[120px]" placeholder="How can we help?"></textarea>
-        </label>
-        <button type="submit" class="px-4 py-2 rounded-2xl shadow bg-black text-white w-max">Send</button>
-        <p class="text-xs text-black/60">This demo form does not send emails. Contact us directly at <a class="underline" href="mailto:admin@animestickerhub.com">admin@animestickerhub.com</a>.</p>
-      </form>
-
-      <div class="mt-10 text-sm text-black/70">
-        <div>Animesticker Hub Studio • Kuala Lumpur, Malaysia</div>
-        <div>Business Hours: Mon–Fri 10:00–17:00</div>
-        <div>Email: <a class="underline" href="mailto:admin@animestickerhub.com">admin@animestickerhub.com</a></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t bg-white">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-black/60 grid md:grid-cols-3 gap-6">
+<!-- HOME -->
+<main>
+  <section data-page="home" class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <div class="font-semibold text-black">Animesticker Hub Studio</div>
-        <p class="mt-2">Original vinyl stickers & decals. No third‑party IP.</p>
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+          Clean, Original Stickers for Everyday Use
+        </h1>
+        <p class="mt-4 text-black/70">
+          We design and produce original vinyl stickers and decals. 
+          No licensed IP — just minimal geometry, nature line art, and positive typography.
+        </p>
+        <div class="mt-6 flex gap-3">
+          <a href="#catalog" class="px-4 py-2 rounded-2xl shadow bg-black text-white">Browse Catalog</a>
+          <a href="#policies" class="px-4 py-2 rounded-2xl border">Policies</a>
+        </div>
       </div>
-      <div>
-        <div class="font-semibold text-black">Policies</div>
-        <ul class="mt-2 space-y-1">
-          <li><a href="#policies" class="underline">Terms</a></li>
-          <li><a href="#policies" class="underline">Privacy</a></li>
-          <li><a href="#policies" class="underline">Refund</a></li>
-          <li><a href="#policies" class="underline">Content & IP</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="font-semibold text-black">Contact</div>
-        <ul class="mt-2 space-y-1">
-          <li><a class="underline" href="mailto:admin@animestickerhub.com">admin@animestickerhub.com</a></li>
-          <li>Kuala Lumpur, Malaysia</li>
-        </ul>
+      <div class="grid grid-cols-3 gap-3">
+        <img src="assets/geo_circle.png" class="rounded-2xl border" alt="Geometric circle">
+        <img src="assets/geo_square.png" class="rounded-2xl border" alt="Geometric square">
+        <img src="assets/geo_triangle.png" class="rounded-2xl border" alt="Geometric triangle">
+        <img src="assets/line_wave.png" class="rounded-2xl border" alt="Nature line wave">
+        <img src="assets/quote_yes.png" class="rounded-2xl border" alt="YES typography">
+        <img src="assets/quote_bekind.png" class="rounded-2xl border" alt="BE KIND typography">
       </div>
     </div>
-    <div class="text-center text-xs text-black/50 pb-6">© <span id="y"></span> Animesticker Hub Studio. All rights reserved.</div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+<!-- CATALOG -->
+  <section data-page="catalog" class="max-w-7xl mx-auto px-4 py-12 hidden">
+    <h2 class="text-2xl font-bold">Catalog</h2>
+    <p class="text-black/70 mt-2">Representative selection. All art created by our studio.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+
+      <!-- product cards -->
+      <div class="rounded-2xl border bg-white overflow-hidden">
+        <img src="assets/geo_circle.png" class="w-full aspect-[4/3] object-cover" alt="">
+        <div class="p-4"><h3 class="font-semibold">Geometric Vinyl Sticker Pack</h3>
+        <p class="text-sm text-black/70 mt-2">Triangles, circles, squares — clean originals.</p></div>
+      </div>
+
+      <div class="rounded-2xl border bg-white overflow-hid
