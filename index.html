@@ -1,84 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Animesticker Hub Studio — Original Vinyl Stickers & Decals</title>
-  <meta name="description" content="Original, policy-compliant vinyl stickers and decals. No third-party IP.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}</style>
-  <script>
-    function route(){
-      const h=(location.hash||'#home').slice(1);
-      document.querySelectorAll('[data-page]')
-        .forEach(s=>s.classList.toggle('hidden',s.dataset.page!==h));
+  <meta name="description" content="We design and produce original vinyl stickers and decals. No licensed IP — just minimal geometry, nature line art, and positive typography." />
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --card: #101418;
+      --muted: #788089;
+      --text: #e9eef3;
+      --accent: #111827;
+      --chip: #0f1419;
+      --chip-border: #1f2a37;
+      --ring: rgba(255,255,255,.08);
+      --brand: #f97316;
     }
-    window.addEventListener('hashchange',route);
-    window.addEventListener('DOMContentLoaded',route);
-  </script>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+    /* Top bar */
+    .topbar { display:flex; align-items:center; gap:14px; padding:12px 0; }
+    .avatar { width:28px; height:28px; border-radius:50%; background:#232a33; border:1px solid var(--ring); }
+    .brand-title { font-weight:700; }
+    .brand-sub { font-size:12px; color: var(--muted); }
+
+    /* Nav */
+    .nav { display:flex; gap:22px; margin-left:auto; }
+    .nav a { font-size:14px; color:#cfd6de; opacity:.9 }
+    .nav a:hover { opacity:1 }
+
+    /* Hero */
+    .hero { display:grid; grid-template-columns: 1.2fr 1fr; gap:32px; align-items:start; padding: 28px 0; }
+    .h1 { font-size: clamp(28px, 5vw, 42px); line-height:1.1; margin: 6px 0 10px; }
+    .p { color:#b8c0c8; margin: 0 0 16px; }
+    .btns { display:flex; gap:10px; }
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--ring); background:#0d1217; font-weight:600; }
+    .btn.primary { background: #0b1015; border-color:#1f2a37; box-shadow: 0 0 0 1px #1f2a37 inset, 0 8px 24px -12px black; }
+    .btn.primary .dot { width:9px; height:9px; border-radius:50%; background: var(--brand); box-shadow:0 0 0 3px rgba(249,115,22,.15); }
+
+    /* Chips (image links) */
+    .chips { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; }
+    .chip { display:flex; align-items:center; gap:10px; padding:8px 10px; background: var(--chip); border:1px solid var(--chip-border); border-radius:999px; min-height:40px; }
+    .chip img { width:42px; height:42px; object-fit:cover; border-radius:999px; border:1px solid #1f2732; background:#0b0f14; }
+    .chip span { font-size:14px; color:#d6dde4; }
+
+    /* Grid gallery */
+    .gallery {
+      margin-top: 26px;
+      display:grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap:14px;
+    }
+    .card { background: var(--card); border:1px solid var(--ring); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+    .card img { display:block; width:100%; height:160px; object-fit:cover; background:#0a0f14; }
+    .card .meta { padding:10px 12px; font-size:13px; color:#cfd6de; display:flex; justify-content:space-between; align-items:center; }
+    .tag { padding:4px 8px; border-radius:999px; background:#0d1319; border:1px solid #1f2a37; font-size:12px; color:#aeb6bf; }
+
+    /* Footer */
+    footer { color:#8f98a2; font-size:13px; margin: 40px 0 10px; text-align:center; }
+
+    /* Responsive */
+    @media (max-width: 1000px) { .hero{ grid-template-columns:1fr; } .chips{ grid-template-columns:1fr; } }
+    @media (max-width: 900px) { .gallery{ grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 560px) { .gallery{ grid-template-columns: repeat(2, 1fr); } }
+  </style>
 </head>
-<body class="min-h-screen bg-white text-black">
-
-<!-- HEADER -->
-<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-2xl bg-black/90"></div>
-      <div class="leading-tight">
-        <div class="font-bold">Animesticker Hub Studio</div>
-        <div class="text-xs text-black/60">Original Vinyl Stickers & Decals</div>
-      </div>
-    </div>
-    <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a href="#home" class="hover:underline">Home</a>
-      <a href="#catalog" class="hover:underline">Catalog</a>
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#policies" class="hover:underline">Policies</a>
-      <a href="#faq" class="hover:underline">FAQ</a>
-      <a href="#contact" class="hover:underline">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HOME -->
-<main>
-  <section data-page="home" class="bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-center">
+<body>
+  <div class="container">
+    <!-- Top bar / brand -->
+    <div class="topbar">
+      <div class="avatar" aria-hidden="true"></div>
       <div>
-        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">
-          Clean, Original Stickers for Everyday Use
-        </h1>
-        <p class="mt-4 text-black/70">
-          We design and produce original vinyl stickers and decals. 
-          No licensed IP — just minimal geometry, nature line art, and positive typography.
-        </p>
-        <div class="mt-6 flex gap-3">
-          <a href="#catalog" class="px-4 py-2 rounded-2xl shadow bg-black text-white">Browse Catalog</a>
-          <a href="#policies" class="px-4 py-2 rounded-2xl border">Policies</a>
+        <div class="brand-title">Animesticker Hub Studio</div>
+        <div class="brand-sub">Original Vinyl Stickers &amp; Decals</div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#about">About</a>
+        <a href="#policies">Policies</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div>
+        <h1 class="h1">Clean, Original Stickers for<br/>Everyday Use</h1>
+        <p class="p">We design and produce original vinyl stickers and decals. No licensed IP — just minimal geometry, nature line art, and positive typography.</p>
+        <div class="btns">
+          <a class="btn primary" href="#catalog" aria-label="Browse Catalog">
+            <span class="dot" aria-hidden="true"></span>
+            Browse Catalog
+          </a>
+          <a class="btn" href="#policies">Policies</a>
         </div>
       </div>
-      <div class="grid grid-cols-3 gap-3">
-        <img src="assets/geo_circle.png" class="rounded-2xl border" alt="Geometric circle">
-        <img src="assets/geo_square.png" class="rounded-2xl border" alt="Geometric square">
-        <img src="assets/geo_triangle.png" class="rounded-2xl border" alt="Geometric triangle">
-        <img src="assets/line_wave.png" class="rounded-2xl border" alt="Nature line wave">
-        <img src="assets/quote_yes.png" class="rounded-2xl border" alt="YES typography">
-        <img src="assets/quote_bekind.png" class="rounded-2xl border" alt="BE KIND typography">
+      <div class="chips" aria-label="Quick picks">
+        <!-- IMPORTANT: image paths are fixed to same-folder files -->
+        <a class="chip" href="#catalog"><img src="geo_circle.png" alt="Geometric circle" /><span>Geometric circle</span></a>
+        <a class="chip" href="#catalog"><img src="geo_square.png" alt="Geometric square" /><span>Geometric square</span></a>
+        <a class="chip" href="#catalog"><img src="geo_triangle.png" alt="Geometric triangle" /><span>Geometric triangle</span></a>
+        <a class="chip" href="#catalog"><img src="line_wave.png" alt="Nature line wave" /><span>Nature line wave</span></a>
+        <a class="chip" href="#catalog"><img src="quote_yes.png" alt="YES typography" /><span>YES typography</span></a>
+        <a class="chip" href="#catalog"><img src="quote_bekind.png" alt="BE KIND typography" /><span>BE KIND typography</span></a>
       </div>
-    </div>
-  </section>
+    </section>
 
-<!-- CATALOG -->
-  <section data-page="catalog" class="max-w-7xl mx-auto px-4 py-12 hidden">
-    <h2 class="text-2xl font-bold">Catalog</h2>
-    <p class="text-black/70 mt-2">Representative selection. All art created by our studio.</p>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-
-      <!-- product cards -->
-      <div class="rounded-2xl border bg-white overflow-hidden">
-        <img src="assets/geo_circle.png" class="w-full aspect-[4/3] object-cover" alt="">
-        <div class="p-4"><h3 class="font-semibold">Geometric Vinyl Sticker Pack</h3>
-        <p class="text-sm text-black/70 mt-2">Triangles, circles, squares — clean originals.</p></div>
+    <!-- Simple gallery preview (uses the same fixed paths) -->
+    <section id="catalog" aria-label="Catalog">
+      <div class="gallery">
+        <div class="card">
+          <img src="geo_circle.png" alt="Geometric circle sticker" />
+          <div class="meta"><span>Geometric Circle</span><span class="tag">6 in</span></div>
+        </div>
+        <div class="card">
+          <img src="geo_square.png" alt="Geometric square sticker" />
+          <div class="meta"><span>Geometric Square</span><span class="tag">6 in</span></div>
+        </div>
+        <div class="card">
+          <img src="geo_triangle.png" alt="Geometric triangle sticker" />
+          <div class="meta"><span>Geometric Triangle</span><span class="tag">6 in</span></div>
+        </div>
+        <div class="card">
+          <img src="line_wave.png" alt="Nature line wave sticker" />
+          <div class="meta"><span>Nature Line Wave</span><span class="tag">6 in</span></div>
+        </div>
+        <div class="card">
+          <img src="quote_yes.png" alt="YES typography sticker" />
+          <div class="meta"><span>YES Typography</span><span class="tag">6 in</span></div>
+        </div>
+        <div class="card">
+          <img src="quote_bekind.png" alt="BE KIND typography sticker" />
+          <div class="meta"><span>BE KIND Typography</span><span class="tag">6 in</span></div>
+        </div>
       </div>
+    </section>
 
-      <div class="rounded-2xl border bg-white overflow-hid
+    <footer>
+      © <span id="y"></span> Animesticker Hub Studio • Minimal, original vinyl stickers
+    </footer>
+  </div>
+
+  <script>
+    // year stamp
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
